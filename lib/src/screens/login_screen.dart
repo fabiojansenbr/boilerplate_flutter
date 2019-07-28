@@ -126,7 +126,7 @@ class LoginScreen extends StatelessWidget {
     if (info['ok']) {
       Navigator.pushReplacementNamed(context, '/home');
     } else {
-      mostrarAlerta(context, info['message']);
+      mostrarAlerta(context, 'Erro ao entrar', info['message']);
     }
   }
 }

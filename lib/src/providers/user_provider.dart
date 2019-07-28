@@ -55,8 +55,12 @@ class UserProvider {
 
     print(decodedResp);
 
+    if (decodedResp.containsValue('Email already exists')) {
+      return {'ok': false, 'message': 'Este e-mail já está em uso.'};
+    }
+
     if (decodedResp.containsValue(true)) {
-      return {'ok': true, 'message': decodedResp['message']};
+      return {'ok': true, 'message': 'Usuário cadastrado com sucesso.'};
     } else {
       return {'ok': false, 'message': decodedResp['error']};
     }

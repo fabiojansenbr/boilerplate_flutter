@@ -1,12 +1,12 @@
 import 'package:codefirst_progress_dialog/codefirst_progress_dialog.dart';
 import 'package:flutter/material.dart';
 
-void mostrarAlerta(BuildContext context, String mensagem) {
+void mostrarAlerta(BuildContext context, String titulo, String mensagem) {
   showDialog(
     context: context,
     builder: (context) {
       return AlertDialog(
-        title: Text('Erro ao entrar'),
+        title: Text(titulo),
         content: Text(mensagem),
         actions: <Widget>[
           FlatButton(

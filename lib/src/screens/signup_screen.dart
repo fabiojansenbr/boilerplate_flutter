@@ -152,10 +152,10 @@ class SignupScreen extends StatelessWidget {
     hideProgressDialog();
 
     if (info['ok']) {
-      mostrarAlerta(context, info['message']);
-      Navigator.pushReplacementNamed(context, '/login');
+      Navigator.pushNamed(context, '/login');
+      mostrarAlerta(context, 'Cadastro realizado.', info['message']);
     } else {
-      mostrarAlerta(context, info['message']);
+      mostrarAlerta(context, 'Erro ao cadastrar.', info['message']);
     }
   }
 }
